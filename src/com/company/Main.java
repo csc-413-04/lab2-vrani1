@@ -1,5 +1,9 @@
 package com.company;
 
+class MatrixThreads {
+
+}
+
 public class Main {
 
     public static int getRand(int min, int max) {
@@ -10,12 +14,6 @@ public class Main {
     public static int[][] multiplySerial(int[][] a, int[][] b) {
         int size = a.length;
         int answer[][] = new int[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                answer[i][j] = 0;
-            }
-        }
-
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 for (int k = 0; k < size; k++) {
@@ -29,11 +27,6 @@ public class Main {
     public static int[][] multiplyParallel(int[][] a, int[][] b) {
         int size = a.length;
         int answer[][] = new int[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                answer[i][j] = 0;
-            }
-        }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 for (int k = 0; k < size; k++) {
